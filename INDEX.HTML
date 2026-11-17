@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gabriel S. Souza — Analista de dados e futuro engenheiro de software</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E3E3E3;--ink:#000;--muted:#4A4A4A;--line:#BDBDBD;--accent:#000;--on-accent:#E3E3E3;--panel:#D6D6D6;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#000;--ink:#E3E3E3;--muted:#A8A8A8;--line:#333;--accent:#E3E3E3;--on-accent:#000;--panel:#1A1A1A;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#000000;--ink:#E3E3E3;--muted:#A8A8A8;--line:#333;--accent:#E3E3E3;--on-accent:#000;--panel:#1A1A1A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.15rem/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+#prog{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:4px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:0 50%;z-index:20}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font:500 1rem var(--display)}
+header.top nav{display:flex;gap:1.5rem;align-items:center}
+header.top a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 2px no-repeat;transition:background-size .3s}
+header.top a:hover{background-size:100% 2px}
+.icon-btn{font:inherit;background:none;color:inherit;border:1.5px solid var(--line);border-radius:999px;padding:.3rem .9rem;cursor:pointer;transition:background .2s,color .2s}
+.icon-btn:hover{background:var(--ink);color:var(--bg)}
+.hero{padding:5vw 0 4rem}
+.hero h1{font:800 clamp(3.4rem,13vw,10.5rem)/.88 var(--display);letter-spacing:-.04em;margin:0 0 1.5rem}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:block;font-style:normal;animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2) i{animation-delay:.15s}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.type{font:800 clamp(1.4rem,4vw,2.4rem)/1.2 var(--display);letter-spacing:-.02em;min-height:1.3em;margin:0 0 1.5rem}
+.type::after{content:"";display:inline-block;width:.1em;height:.9em;margin-left:.1em;background:var(--ink);vertical-align:-.05em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{max-width:34rem;font-size:1.3rem;line-height:1.45;margin:0 0 2rem}
+.cta{display:inline-block;background:var(--accent);color:var(--on-accent);font:500 1.05rem var(--display);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;transition:transform .2s}
+.cta:hover{transform:translateY(-3px)}
+.ghost{display:inline-block;color:var(--ink);font:500 1.05rem var(--display);border:1.5px solid var(--ink);border-radius:999px;padding:.8rem 1.4rem;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-3px)}
+section{padding:4rem 0;border-top:1.5px solid var(--line)}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 1.5rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin-bottom:3rem}
+.fact{border:1.5px solid var(--ink);border-radius:1rem;padding:1.4rem;transition:background .25s,color .25s,transform .25s}
+.fact:hover{background:var(--ink);color:var(--bg);transform:translateY(-6px) rotate(-1deg)}
+.fact b{display:block;font:800 2.6rem/1 var(--display);letter-spacing:-.03em;margin-bottom:.4rem}
+.fact span{font:500 1rem var(--display)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem}
+.about p{margin:0 0 1rem;max-width:36rem}
+.about ul{list-style:none;margin:0;padding:0;font:500 1.05rem var(--display)}
+.about li{padding:.7rem 0;border-bottom:1.5px solid var(--line);transition:padding-left .25s}
+.about li:hover{padding-left:.8rem}
+.about li small{display:block;font:400 1rem var(--body);color:var(--muted)}
+.contact p{max-width:36rem;margin:0 0 1.5rem}
+.row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.info{list-style:none;margin:0 0 1rem;padding:0;max-width:36rem;font:500 1.1rem var(--display)}
+.info li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;border-bottom:1.5px solid var(--line);flex-wrap:wrap}
+.info a{text-decoration:none}
+.info a:hover{text-decoration:underline}
+.info button{font:500 .9rem var(--display);background:none;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.3rem .9rem;cursor:pointer}
+.info button:hover{border-color:var(--ink)}
+#msg{min-height:1.5rem;color:var(--muted);margin:0}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:1rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.facts .rv:nth-child(2){transition-delay:.1s}.facts .rv:nth-child(3){transition-delay:.2s}.facts .rv:nth-child(4){transition-delay:.3s}
+@media (max-width:720px){.about{grid-template-columns:1fr;gap:2rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="prog" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="top">
+    <a href="#topo" style="font-weight:800">Gabriel S. Souza</a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <button class="icon-btn" id="tema" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <div class="hero">
+      <h1 aria-label="Gabriel S. Souza"><span><i>Gabriel</i></span><span><i>S. Souza</i></span></h1>
+      <div class="type" id="type" aria-label="Analista de dados e futuro engenheiro de software"></div>
+      <!--FOTO-->
+      <p>Tenho 20 anos, sou católico e trabalho com dados. Estou construindo o caminho para ser engenheiro de software e faço pequenos trabalhos sob demanda.</p>
+      <a class="cta" href="#contato">Falar comigo</a>
+    </div>
+
+    <section id="sobre">
+      <h2 class="rv">Sobre mim</h2>
+      <div class="facts">
+        <div class="fact rv"><b><span data-count="20">20</span></b><span>anos de idade</span></div>
+        <div class="fact rv"><b>Fé</b><span>Sou católico</span></div>
+        <div class="fact rv"><b>Dados</b><span>Atuo como analista</span></div>
+        <div class="fact rv"><b>Código</b><span>Futuro engenheiro de software</span></div>
+      </div>
+      <div class="about">
+        <div class="rv">
+          <p>Sou Gabriel, tenho 20 anos e atuo como analista de dados. Meu trabalho é organizar informações, encontrar o que elas dizem e explicar de um jeito simples.</p>
+          <p>Sou católico, e a fé é parte de quem eu sou: procuro trabalhar com honestidade e respeito por cada pessoa. Meu objetivo é me tornar engenheiro de software.</p>
+          <p>Também faço pequenos trabalhos para quem precisa de ajuda pontual. Se você tem uma ideia ou uma tarefa, me chame.</p>
+        </div>
+        <ul class="rv">
+          <li>Análise de dados<small>Organizar, limpar e interpretar informações</small></li>
+          <li>Planilhas e relatórios<small>Resultados claros e fáceis de ler</small></li>
+          <li>Pequenos trabalhos<small>Projetos pontuais sob demanda</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <h2 class="rv">Vamos conversar</h2>
+      <p class="rv">Tem um projeto em mente ou precisa de ajuda com dados? Me chame pelo WhatsApp, ligue ou mande um e-mail.</p>
+      <div class="row rv">
+        <a class="cta" href="https://wa.me/5521995972668" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="ghost" href="tel:+5521995972668">Ligar</a>
+      </div>
+      <ul class="info rv">
+        <li><a href="tel:+5521995972668">(21) 99597-2668</a><button type="button" data-copy="(21) 99597-2668">Copiar</button></li>
+        <li><a href="mailto:gabrieldasilvadesouza4@gmail.com">gabrieldasilvadesouza4@gmail.com</a><button type="button" data-copy="gabrieldasilvadesouza4@gmail.com">Copiar</button></li>
+      </ul>
+      <p id="msg" role="status"></p>
+    </section>
+  </main>
+  <footer>© 2026 Gabriel S. Souza. Todos os direitos reservados.</footer>
+</div>
+
+<script>
+var reduz=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.getElementById("tema").onclick=function(){
+  var r=document.documentElement;
+  var escuro=r.getAttribute("data-theme")?r.getAttribute("data-theme")==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;
+  r.setAttribute("data-theme",escuro?"light":"dark");
+};
+/* Barra de progresso de rolagem */
+var prog=document.getElementById("prog");
+function rolar(){var h=document.documentElement.scrollHeight-window.innerHeight;prog.style.transform="scaleX("+(h>0?Math.min(1,window.scrollY/h):0)+")"}
+window.addEventListener("scroll",rolar,{passive:true});rolar();
+/* Texto que se escreve sozinho */
+var frases=["Analista de dados","Futuro engenheiro de software","Católico, 20 anos","Pequenos trabalhos sob demanda"];
+var tp=document.getElementById("type");
+if(reduz){tp.textContent=frases[0]}else{
+  var fi=0,ci=0,apagando=false;
+  (function passo(){
+    var f=frases[fi];
+    tp.textContent=f.slice(0,ci);
+    if(!apagando&&ci===f.length){apagando=true;return setTimeout(passo,1600)}
+    if(apagando&&ci===0){apagando=false;fi=(fi+1)%frases.length}
+    ci+=apagando?-1:1;
+    setTimeout(passo,apagando?35:70);
+  })();
+}
+/* Revelar ao rolar e contar a idade */
+var itens=document.querySelectorAll(".rv");
+var cont=document.querySelector("[data-count]");
+function contar(){
+  var alvo=+cont.getAttribute("data-count"),n=0;
+  var t=setInterval(function(){n++;cont.textContent=n;if(n>=alvo)clearInterval(t)},60);
+}
+if(reduz||!("IntersectionObserver" in window)){itens.forEach(function(e){e.classList.add("on")})}
+else{
+  cont.textContent="0";
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add("on");io.unobserve(e.target);
+        if(e.target.contains(cont))contar();
+      }
+    });
+  },{threshold:.15});
+  itens.forEach(function(e){io.observe(e)});
+}
+/* Copiar contatos */
+var $m=document.getElementById("msg");
+document.querySelectorAll("[data-copy]").forEach(function(b){
+  b.onclick=function(){
+    var v=b.getAttribute("data-copy");
+    try{
+      navigator.clipboard.writeText(v).then(function(){$m.textContent="Copiado: "+v},function(){$m.textContent="Não foi possível copiar. O contato é "+v});
+    }catch(e){$m.textContent="Não foi possível copiar. O contato é "+v}
+  };
+});
+</script>
+</body>
+</html>
